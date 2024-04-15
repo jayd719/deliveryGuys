@@ -1,5 +1,5 @@
 <header data-bs-theme="dark" id="nav-bar" class="fixed-top">
-  <div class="collapse text-bg-dark" id="navbarHeader">
+  <div class="collapse text-bg-dark bg-dark" id="navbarHeader">
       <div class="container">
       <div class="row">
           <div class="col-sm-8 col-md-7 py-4">
@@ -24,20 +24,26 @@
   <div class="navbar navbar-dark bg-dark shadow-sm">
       <div class="container">
       <a href="#" class="navbar-brand d-flex align-items-center">Delivery</a>
-      <button id="button-nav" class="navbar-toggler d-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation"></button>
+      <button id="button-nav" class="btn text-whit" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/></svg></button>
       </div>
   </div>
   </header>
+
+  
 
   <script>
     let navBar = document.getElementById('nav-bar');
     let navButton = document.getElementById('button-nav')
 
+    navButton.style.visibility='hidden';
+    
     navBar.addEventListener("mouseenter",()=>{
+    navButton.style.visibility='visible';
     navButton.click();
     })
 
     navBar.addEventListener("mouseleave",()=>{
+    navButton.style.visibility='hidden';
     navButton.click();
     })
 
